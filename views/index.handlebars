@@ -1,0 +1,36 @@
+
+<div class="container">
+  <div class="image"></div>
+<h2>Eat-Da_Burger!</h2>
+<div class="row">
+    
+<div class="new_items col-md-6">
+  {{#each burgers}}
+  	<div class="each_entry">
+  		<span>{{this.id}}. </span> 
+      <span>{{this.name}}</span>
+      <button data-id="{{this.id}}"  type="button" class="deleteBurger btn btn-outline-success btn-sm">Devour it!</button>
+  	</div>
+  {{/each}}
+</div>
+
+<div class="deleted_items col-md-6">
+  {{#each deletedBurgers}}
+  	<div class="each_entry">
+  		<span class="deleted">{{this.id}}. </span> 
+      <span class="deleted">{{this.name}}</span>
+      <button data-id="{{this.id}}"  type="button" class="archiveBurger btn btn-outline-danger btn-sm">Delete</button>
+  	</div>
+  {{/each}}
+</div>
+
+
+<form class="create-form">
+  <div class="form-group">
+    <textarea id="newBurger" name="new" rows="2" cols="50"></textarea>
+  </div>
+  <button type="submit" class="btn btn-outline-primary submit_btn">Submit</button>
+  <div id="text">Enter your favorite burger and Click the "Submit" button.</div>
+</form>
+</div>
+</div>
